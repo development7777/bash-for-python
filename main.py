@@ -1,35 +1,31 @@
 """
     Bash for Python v1.0.0
-    This progect under MIT License.
+    This project under MIT License.
     more info:README.md
 
     This is the main file of the project.
 """
 
 # third-party modules import
-
 import os
 import sys
-import yaml # config file
+import yaml  # config file
 
 # local modules import
-
-import interactive
-import cmdexec
+import interactiveM
+# import cmdexec
 
 # variables
 args = None
 config = None
 
 # main
-
 def main():
     """
     Main function of the project.
     """
 
     # global variables
-
     global args
     global config
 
@@ -52,10 +48,14 @@ def main():
         sys.exit(1)
 
     # arguments check
-
     args = sys.argv
     if len(args) == 1:
-        interactive.interactive()
+        interactiveM.interactiveMode(config)
     else:
         print("command options coming soon.")
         sys.exit(1)
+
+try:
+    main()
+except KeyboardInterrupt:
+    exit(0)

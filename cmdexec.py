@@ -1,3 +1,7 @@
+# import module
+
+import subprocess
+
 def cmdExec(cmd: str) -> None:
     """
     Execute command
@@ -7,4 +11,4 @@ def cmdExec(cmd: str) -> None:
     cmd : str
         Command to execute
     """
-    pass
+    subprocess.run(cmd, shell=True, check=True)
