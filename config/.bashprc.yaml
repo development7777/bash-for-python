@@ -1,0 +1,13 @@
+# bash for python v1.0.0
+# This progect under MIT License.
+# more info:README.md
+#
+# This is the config file of the project.
+
+# The default value of the prompt.
+
+prompt: "\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$"
+
+# The default carent directory.
+
+carent_directory: "${HOMEDIR}"
