@@ -6,11 +6,16 @@
     This is the main file of the project.
 """
 
-# modules import
+# third-party modules import
 
 import os
 import sys
 import yaml # config file
+
+# local modules import
+
+import interactive
+import cmdexec
 
 # variables
 args = None
@@ -19,6 +24,10 @@ config = None
 # main
 
 def main():
+    """
+    Main function of the project.
+    """
+
     # global variables
 
     global args
@@ -40,4 +49,13 @@ def main():
             print(f"Error: .bashprc.yaml syntax error in line {mark.line + 1}, column {mark.column + 1}.")
         else:
             print("Error: .bashprc.yaml syntax error.")
+        sys.exit(1)
+
+    # arguments check
+
+    args = sys.argv
+    if len(args) == 1:
+        interactive.interactive()
+    else:
+        print("command options coming soon.")
         sys.exit(1)
