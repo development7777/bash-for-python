@@ -10,15 +10,21 @@ def echo(cmd: str) -> None:
     cmd : str
         Command to execute
     """
-    print(cmd[5:])
+    if cmd == "echo":
+        print("echo\n")
+    else:
+        print(cmd[5:])
 
 def cd(cmd: str) -> None:
     """
     Change directory command"
     """
-    try:
-        os.chdir(cmd[3:])
-    except FileNotFoundError:
-        print(f"{cmd}\nbash: cd: {cmd[3:]}: No such file or directory.")
-    except NotADirectoryError:
-        print(f"{cmd}\nNo such file or directory.")
+    if cmd == "cd":
+        os.chdir(os.path.expanduser("~"))
+    else:
+        try:
+            os.chdir(cmd[3:])
+        except FileNotFoundError:
+            print(f"{cmd}\nbash: cd: {cmd[3:]}: No such file or directory.")
+        except NotADirectoryError:
+            print(f"{cmd}\nNo such file or directory.")

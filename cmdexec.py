@@ -24,9 +24,9 @@ def cmdExec(cmd: str) -> None:
         print(defV.VERSION_MSG)
     elif cmd == "bash -c help":
         print(defV.CMD_HELP_MSG)
-    elif cmd.startswith("echo "):
+    elif cmd.startswith("echo"):
         builtC.echo(cmd)
-    elif cmd.startswith("cd "):
+    elif cmd.startswith("cd"):
         builtC.cd(cmd)
     else:
         try:
