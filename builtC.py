@@ -17,14 +17,27 @@ def echo(cmd: str) -> None:
 
 def cd(cmd: str) -> None:
     """
-    Change directory command"
+    Change directory command.
+
+    Parameters
+    ----------
+    cmd : str
+        Command to execute
     """
+    print(cmd)
     if cmd == "cd":
         os.chdir(os.path.expanduser("~"))
     else:
         try:
             os.chdir(cmd[3:])
         except FileNotFoundError:
-            print(f"{cmd}\nbash: cd: {cmd[3:]}: No such file or directory.")
+            print(f"bash: cd: {cmd[3:]}: No such file or directory.")
         except NotADirectoryError:
-            print(f"{cmd}\nNo such file or directory.")
+            print(f"bash: cd: {cmd[3:]}: No such file or directory.")
+
+def pwd() -> None:
+    """
+    Print working directory command.
+    """
+    print("pwd")
+    print(os.getcwd())

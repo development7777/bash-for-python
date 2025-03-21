@@ -28,6 +28,8 @@ def cmdExec(cmd: str) -> None:
         builtC.echo(cmd)
     elif cmd.startswith("cd"):
         builtC.cd(cmd)
+    elif cmd == "pwd":
+        builtC.pwd()
     else:
         try:
             subprocess.run(cmd, shell=True, check=True)
