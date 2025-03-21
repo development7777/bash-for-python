@@ -15,9 +15,6 @@ def interactiveMode(config: dict) -> None:
 
     # interactive mode
     cmd = input(config["prompt"])
-    #while cmd != "exit":
-    #    subprocess.run(cmd, shell=True, check=True)
-    #    cmd = input(config["prompt"])
     cmdexec.cmdExec(cmd)
     file = open(__file__, encoding='UTF-8')
     exec(file.read())
