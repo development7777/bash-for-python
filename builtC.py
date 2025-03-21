@@ -35,9 +35,13 @@ def cd(cmd: str) -> None:
         except NotADirectoryError:
             print(f"bash: cd: {cmd[3:]}: No such file or directory.")
 
-def pwd() -> None:
+def pwd(cmd: str) -> None:
     """
     Print working directory command.
+    Parameters
+    ----------
+    cmd : str
+        Command to execute
     """
-    print("pwd")
+    print(cmd)
     print(os.getcwd())
