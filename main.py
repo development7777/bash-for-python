@@ -3,7 +3,7 @@
     This project under MIT License.
     more info:README.md
 
-    This is the main file of the project.
+    This is the Main file of the project.
 """
 
 # third-party modules import
@@ -13,7 +13,6 @@ import yaml  # config file
 
 # local modules import
 import interactiveM
-# import cmdexec
 
 # variables
 args = None
@@ -46,6 +45,10 @@ def main():
         else:
             print("Error: .bashprc.yaml syntax error.")
         sys.exit(1)
+
+    # set current directory
+    default_directory = config["carent_directory"].replace("${HOMEDIR}", os.path.expanduser("~"))
+    os.chdir(default_directory)
 
     # arguments check
     args = sys.argv
