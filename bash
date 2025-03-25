@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """
     Bash for Python v1.0.0
     This project under MIT License.
