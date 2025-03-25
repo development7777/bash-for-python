@@ -3,7 +3,7 @@
     This project under MIT License.
     more info:README.md
 
-    This is the main file of the project.
+    This is the define variables file of the project.
 """
 
 VERSION_MSG = "bash --version\nGNU bash, version 5.1.16(1)-release (x86_64-pc-linux-gnu)\nCopyright (C) 2020 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\n\nThis is free software; you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nBash for Python, version 1.0.0\nThis project under MIT License.\nmore info:README.md\n"
